@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/gtk-close.png</file>
+        <file>img/document-open.png</file>
+        <file>img/gtk-save.png</file>
+        <file>img/gtk-add.png</file>
+        <file>img/gtk-remove.png</file>
+    </qresource>
+</RCC>
