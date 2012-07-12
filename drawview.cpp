@@ -18,10 +18,22 @@ void DrawView::mousePressEvent(QMouseEvent *event)
         return;
 
     QPointF realPos = mapToScene(event->pos());
+//    BoundingBoxGraphicsItem *selectedItem = NULL;
 
     switch (m)
     {
     case Select:
+//        selectedItem = static_cast<BoundingBoxGraphicsItem*>(scene()->itemAt(realPos));
+
+//        if (selectedItem)
+//            selectedItem->setSelected(true);
+//        else
+//        {
+//            for (int i = 0; i < scene()->items().length(); ++i)
+//                scene()->items().at(i)->setSelected(false);
+//        }
+//        scene()->invalidate();
+
         break;
     case Insert:
         bbox = new BoundingBoxGraphicsItem(realPos.x(), realPos.y());

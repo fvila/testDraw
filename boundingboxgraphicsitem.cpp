@@ -12,6 +12,11 @@ BoundingBoxGraphicsItem::BoundingBoxGraphicsItem(qreal posx, qreal posy)
     size.setY(posy);
 
     id = "";
+
+//    sel = false;
+    QGraphicsItem::setFlags(QGraphicsItem::ItemIsSelectable |
+                            QGraphicsItem::ItemIsMovable |
+                            QGraphicsItem::ItemIsFocusable);
 }
 
 QRectF BoundingBoxGraphicsItem::boundingRect() const
@@ -25,7 +30,11 @@ void BoundingBoxGraphicsItem::paint(QPainter *painter, const QStyleOptionGraphic
     Q_UNUSED(widget)
 
     QPen pen;
-    pen.setColor(QColor("black"));
+//    if (sel)
+//        pen.setColor(QColor("red"));
+//    else
+        pen.setColor(QColor("black"));
+
     pen.setWidth(2);
 
     painter->setPen(pen);
@@ -50,3 +59,13 @@ void BoundingBoxGraphicsItem::setId(QString id)
 {
     this->id = id;
 }
+
+//bool BoundingBoxGraphicsItem::selected()
+//{
+//    return sel;
+//}
+
+//void BoundingBoxGraphicsItem::setSelected(bool state)
+//{
+//    sel = state;
+//}

@@ -15,11 +15,16 @@ public:
 
     void setId (QString);
 
+//    void setSelected(bool);
+//    bool selected();
+
 private:
     QRectF bbox;
     QPointF origin, size;
 
     QString id;
+
+ //   bool sel;
 };
 
 #endif // BOUNDINGBOXGRAPHICSITEM_H
